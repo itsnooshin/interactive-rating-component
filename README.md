@@ -1,20 +1,25 @@
 # interactive-rating-component
 
 
+
+
+https://user-images.githubusercontent.com/93255365/210713367-67a7a4ef-1c78-4d7f-a4e0-2239ac9da4c0.mp4
+
+
+
+
+
 ## About The Project
 This is a nice, small project to practice handling user interactions and updating the DOM.Perfect for anyone who has learned the basics of JavaScript!Your challenge is to build out this interactive rating component and get it looking as close to the design as possible.
-
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go
 
-<br><br>Users should be able to:
-<br>1. Select and submit a number rating.
-1. See the "Thank you" card state after submitting a rating.
-<br>
-1. View the optimal layout for the app depending on their device's screen size.
-<br>
-1. See hover states for all interactive elements on the page.
-<br>
-## Built with
+Users should be able to:
+1. Select and submit a number rating.
+2. See the "Thank you" card state after submitting a rating.
+3. View the optimal layout for the app depending on their device's screen size.
+4. See hover states for all interactive elements on the page.
+
+#  Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
