@@ -1,5 +1,5 @@
 'use strict';
-
+//select Elements
 const btnLabel = document.querySelector('.btn-sub');
 const numSpan = document.querySelector('.num');
 const rating = document.querySelectorAll('.but-main');
@@ -23,13 +23,13 @@ for (let i = 0; i < rating.length;  i++) {
       const numbers = rating[i].textContent;
 
       // when we select one elemnt but not selected prev element
-      for(let i =0; i < rating.length; i++){
+      for(let i = 0; i < rating.length; i++){
         rating[i].classList.contains('selected')
         rating[i].classList.remove('selected');
       }
       rating[i].classList.add('selected');
 
-      // change the text of span
+      // change the text of  thank you message 
         rateText.textContent = `You selected ${numbers} out of 5`;
          btnLabel.addEventListener('click' , function(){
            mainContainer.classList.add('hidden');
