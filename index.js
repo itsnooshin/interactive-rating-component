@@ -1,53 +1,53 @@
 'use strict';
-// btn
+
 const btnLabel = document.querySelector('.btn-sub');
 const numSpan = document.querySelector('.num');
-
+const rating = document.querySelectorAll('.but-main');
 const leadRrate =document.querySelector('.lead-rate')
-
-//conatiner
+const title = document.querySelector('.title-content');
 const mainContainer = document.querySelector('.container');
-const rateContainer = document.querySelector('.rate-container');
-const element = document.getElementsByClassName('but-main');
-const el = document.querySelectorAll('.but-main');
+const thankContainer = document.querySelector('.rate-container');
 const rateText = document.querySelector('.rate-text');
+const Text = document.querySelector('.lead');
+const rateAgain = document.getElementById('rate-again');
 
-//el
 
 
-let prevDiv = null
-for (let i = 0; i < element.length;  i++) {
-   element[i].addEventListener('click',function(e){
-     var target = e.currentTarget;
-      const numbers = element[i].textContent;
-       if(numbers){
-        element[i].style.color ='#fff';
-    
+
+
+
+//function
+for (let i = 0; i < rating.length;  i++) {
+  rating[i].addEventListener('click',function(){
+ 
+      const numbers = rating[i].textContent;
+
+      // when we select one elemnt but not selected prev element
+      for(let i =0; i < rating.length; i++){
+        rating[i].classList.contains('selected')
+        rating[i].classList.remove('selected');
+      }
+      rating[i].classList.add('selected');
+
+      // change the text of span
         rateText.textContent = `You selected ${numbers} out of 5`;
          btnLabel.addEventListener('click' , function(){
            mainContainer.classList.add('hidden');
-           rateContainer.classList.remove('hidden');
-         });
-       }
-     
-      
-       if(prevDiv){
-         prevDiv.style.backgroundColor = "#2C353F";
-         prevDiv.style.color = "hsl(217 , 12% , 63%)";
-         target.style.backgroundColor = "hsl(25, 97%, 53%)";
-        
-         prevDiv = target;
-       } else{
-        {
-          target.style.backgroundColor = "hsl(25, 97%, 53%)";
-          prevDiv = target;
-         
-        }
-       }
-      
+           thankContainer.classList.remove('hidden');
+         });  
    })
   
 }
 
+//rateAgain button
 
-
+rateAgain.addEventListener('click', function(){
+  thankContainer.classList.add('hidden');
+  mainContainer.classList.remove('hidden');
+   
+  for(let i =0; i < rating.length; i++){
+    rating[i].classList.contains('selected')
+    rating[i].classList.remove('selected');
+  }
+  rating[i].classList.add('selected');
+})

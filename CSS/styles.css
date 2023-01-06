@@ -69,7 +69,6 @@ p {
 .star-img {
   background-color: #2C353F;
   border-radius: 50%;
- 
   padding: 20px;
 }
 .btn-container{
@@ -83,12 +82,13 @@ p {
   font-family: inherit;
   background-color: var(--orangecolor);
   color: var(--white);
-  width: 500px; 
+  width: 100%;
   border-radius: 40px;
   padding: 13px 0;
   letter-spacing: 3px;
   font-size: 1.7rem;
-   /* margin: 0 20px;  */
+  cursor: pointer;
+  transition: 0.3s;
 }
 .but-main{
   border: none;
@@ -101,13 +101,14 @@ p {
   color: var(--lightgray);
   margin-bottom: 2rem;
   text-align: center;
+  transition: 0.9s ;
   
 
 }
 .button-num{
   display: flex;
   align-items: flex-start;
-  justify-content: start;
+  justify-content: space-between;
    gap: 20px;
  
   
@@ -154,9 +155,13 @@ p {
   font-size: 1.5rem;
   border-radius: 20px;
 }
-.hidden{
+ .hidden{
   display:none;
 } 
+.selected {
+  background-color: var(--orangecolor);
+  color: var(--white);
+}  
 
 /* responsive */
 @media(max-width:500px){
@@ -175,4 +180,12 @@ p {
     
     max-width: 370px;
   }
+}
+
+/* show message */
+.show-message {
+  color: red;
+  font-size: 1.5rem;
+  font-family: inherit;
+  margin-top: 1rem;
 }
